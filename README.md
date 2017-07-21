@@ -1,1 +1,1 @@
-# auto_bank_reconcilation
+# automated bank reconciliation
