@@ -1,5 +1,5 @@
 # Automated Bank Reconciliation
-This handy little script finds matching instanses between your records (vouchers, transactions etc) to that of your bank, and spits out a new file, with all the matching records highlighted out of the box. you can use this to automate the horrid processs of bank reconciliation which has to happed at the end of almost every month.
+This handy little script finds matching instanses between your records (vouchers, transactions etc) to that of your bank, and spits out a new exel (.xlsx) file, with all the matching records highlighted out of the box. you can use this to automate the horrid processs of bank reconciliation which has to happed at the end of almost every month. Once all the instances are highlited, you can easily filter them out. Saves a lot of Manual Tick-Offs. Saves a Lot of Time!
 
 In order to make this script work you need 2 things:
 ```
@@ -38,7 +38,9 @@ In order to make this script work you need 2 things:
 * contatct me at : alifarhad557@gmail.com
 
 
-
+### TO-DO:
+* make the code more modular
+* create a GUI app, may be?
 ### Stuff used to make this:
  * [Openpyxl](http://openpyxl.readthedocs.io/en/default/index.html) for handling excel files
  * Python 3 - the pure love <3 
