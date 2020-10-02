@@ -7,14 +7,14 @@ In order to make this script work you need 2 things:
  
 # how-to:
 * Create an excel file with two sheets. i.e. (sheet_A, sheet_B)
-* copy all of your local records in "Sheet_A" in this format:
+* Copy all of your local records in "Sheet_A" in this format:
 
 | Sr| Cheque No         | Amount  |
 | ------------- |:-------------:| -----:|
 |   1       | 1234567			 | 500 |
 |   2       | 1234      |   100 |
 | 	3       | 3124      |    200 |
-* copy all of the bank records (i.e gotten from your bank) in "Sheet_B" in the same format as above:-
+* Copy all of the bank records (i.e gotten from your bank) in "Sheet_B" in the same format as above:-
 
 | Sr        | Cheque No         | Amount  |
 | ------------- |:-------------:| -----:|
@@ -22,10 +22,10 @@ In order to make this script work you need 2 things:
 |   2       | 1234      |   100 |
 | 	3       | 3124      |    200 |
 
-* copy your excel file in the same folder as the script
-* go to cmd -> cd {your_directory} -> bank_recon.py
-* follow the instructions
-* after the script is done, your outfile will have these two rows highlighted since they were the same in both the sheets:
+* Copy your excel file in the same folder as the script
+* Go to cmd -> cd {your_directory} -> bank_recon.py
+* Follow the instructions
+* After the script is done, your outfile will have these two rows highlighted since they were the same in both the sheets:
 
 | Sr        | Cheque No         | Amount  |
 | ------------- |:-------------:| -----:|
@@ -33,19 +33,19 @@ In order to make this script work you need 2 things:
 | 	3       | 3124      |    200 |
 
 # Warning:
-* the order of column matters. 
+* The order of column matters. 
 * You might need to adjust the parameters, if you want to include more records, or
-* switch the position of the columns
+* Switch the position of the columns
 
 #### Side Note:
 * I have the whole script in exe format, so if you are not concerned with all the
  technical details. shoot me an email. I will be more than happy to provide you with direct .exe file 
-* contatct me at : alifarhad557@gmail.com
+* Contatct me at : alifarhad557@gmail.com
 
 
 ### TO-DO:
-* make the code more modular
-* create a GUI app, may be?
+* Make the code more modular
+* Create a GUI app, may be?
 ### Stuff used to make this:
  * [Openpyxl](http://openpyxl.readthedocs.io/en/default/index.html) for handling excel files
  * Python 3 - the pure love <3 
