@@ -13,7 +13,7 @@ In order to make this script work you need 2 things:
 # How-To (Easy-Way):
 
 - make sure your files are ready as described below in the hard-way section
-- go to: `https://` and profit!
+- go to: `https://pastoral-brawny-cheddar.glitch.me/` and follow the instructions!
 
 # How-to (Harder-Way):
 
