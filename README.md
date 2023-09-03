@@ -1,11 +1,9 @@
 # Automated Bank Reconciliation
 
-This handy little website finds matching instances between your records (vouchers, transactions etc.) to that of your banks, and spits out a new excel (.xlsx) file, with all the matching records removed out of the box. you can use this to automate the horrid process of bank reconciliation which has to happed at the end of almost every month. Once all the instances are highlighted, you can easily filter them out. Saves a lot of Manual Tick-Offs. Saves a Lot of Time!
+This handy little website finds matching instances between your records (vouchers, transactions etc.) to that of your banks, and spits out a new excel (.xlsx) file, with all the matching records removed out of the box. you can use this to automate the horrid process of bank reconciliation which has to happed at the end of almost every month. this site aaves a lot of Manual Tick-Off & Saves a Lot of Time!
 
-In order to make this script work you need 2 things:
-
+In order to make this project work you need 3 things:
 ~~\* Python3~~
-
 - nodeJS
 - an .XLSX file (with bank records)
 - an .XLSX file (with account book records)
