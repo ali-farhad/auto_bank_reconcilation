@@ -10,6 +10,11 @@ In order to make this script work you need 2 things:
 - an .XLSX file (with bank records)
 - an .XLSX file (with account book records)
 
+# How-To (Easy-Way):
+
+- make sure your files are ready as described below in the hard-way section
+- go to: `https://` and profit!
+
 # How-to (Harder-Way):
 
 - Create an excel file for your bank records
@@ -38,11 +43,6 @@ In order to make this script work you need 2 things:
 - go to : `http://localhost:5000/`
 
 - after the script is done, your downloaded result file will have duplicates value removed from both bank sheet and bankbook / local sheet. leaving you with unique records that will need to be reconciled manually.
-
-# How-To (Easy-Way):
-
-- make sure your files are ready as described above
-- go to: `https://` and profit!
 
 # Warning:
 

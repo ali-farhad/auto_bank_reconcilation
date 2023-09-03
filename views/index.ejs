@@ -1,0 +1,136 @@
+<div class="author">
+    <h1 class="author__heading mb-5">Automated Bank Reconcilation</h1>
+</div>
+
+<div class="container">
+
+  <% if (error !== null) { %>
+  <div class="alert alert-primary" role="alert">
+   
+      <p>Error: <%= error %></p>
+    <% } %>
+    </div>
+
+  
+ 
+  
+
+  <div class="card text-bg-primary mb-3">
+    <div class="card-header">Step 1</div>
+    <div class="card-body">
+      <h5 class="card-title">Upload Bank File</h5>
+      <p class="card-text">Upload your excel file with bank records in it</p>
+        <form action="/uploadBank" method="post" enctype="multipart/form-data">
+          <input type="file" name="file" accept=".xlsx,.xls, .jpg" required>
+          <input type="submit" value="Upload">
+        </form>
+        </div>
+  </div>
+
+  
+  <% if (successMessage.length > 0) { %>
+    <div class="alert alert-primary" role="alert">
+   
+      <div class="success-message">
+        <%= successMessage %>
+      </div>
+
+      <% if (totalBankRows > 0) { %>
+        <div class="success-message">
+          <p>Total Rows Found: <%= totalBankRows %></p>
+        </div>
+        <% } %>
+
+  </div>
+  <% } %> 
+
+
+
+  <div class="card text-bg-warning mb-3">
+    <div class="card-header">Step 2</div>
+    <div class="card-body">
+      <h5 class="card-title">Upload Local File</h5>
+      <p class="card-text">Upload excel file with your local / accounts records in it </p>
+      <form action="/uploadLocal" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".xlsx,.xls, .jpg" required>
+        <input type="submit" value="Upload">
+      </form>
+    </div>
+    </div>
+
+
+<% if (localMessage.length > 0) { %>
+  <div class="alert alert-primary" role="alert">
+ 
+    <div class="success-message">
+      <%= localMessage %>
+    </div>
+
+    <% if (totalLocalRows > 0) { %>
+      <div class="success-message">
+        <p>Total Rows Found: <%= totalLocalRows %></p>
+      </div>
+      <% } %>
+
+</div>
+<% } %> 
+
+<% if (isLocalFileReady && isBankFileReady) { %>
+ 
+
+<div class="card text-bg-info mb-3">
+  <div class="card-header">Step 3</div>
+  <div class="card-body">
+    <h5 class="card-title">Remove duplicates & Download the result file</h5>
+    <p class="card-text">remove the duplicates and download your result file. The result file will contain 02 sheets. one will contain leftover records form your bank sheet, and the other sheet will contain leftover results from your local/accounts sheet.
+    </p>
+
+    <button id="btn_remove" type="button" class="btn btn-light">Remove Duplicates</button>
+    
+    <% if (isDownloadReady) { %>
+     
+    
+    <button id="btn_download" type="button" class="btn btn-light">Download File</button>
+    <a href="https://forms.gle/knLqTQMz246YP1gw6" target="_blank" id="btn_donate" class="btn btn-warning throbbing-link">Donate to me</a>
+    <% } %>
+
+  </div>
+</div>
+<% } %>
+
+<% if (dupMessage.length > 0) { %>
+  <div class="alert alert-primary" role="alert">
+ 
+    <div class="success-message">
+      <%= dupMessage %>
+    </div>
+
+    <% if (totalLocalRows > 0) { %>
+      <div class="success-message">
+        <p>Total Rows Found: <%= totalLocalRows %></p>
+      </div>
+      <% } %>
+
+</div>
+<% } %> 
+
+<% if (fileSuccessMsg.length > 0) { %>
+  <div class="alert alert-primary" role="alert">
+ 
+    <div class="success-message">
+      <%= fileSuccessMsg %>
+    </div>
+
+    <% if (totalLocalRows > 0) { %>
+      <div class="success-message">
+        <p>Total Rows Found: <%= totalLocalRows %></p>
+      </div>
+      <% } %>
+
+</div>
+<% } %> 
+
+
+
+
+
