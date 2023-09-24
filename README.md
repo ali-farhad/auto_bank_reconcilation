@@ -4,6 +4,7 @@ This handy little website finds matching instances between your records (voucher
 
 In order to make this project work you need 3 things:
 ~~\* Python3~~
+
 - nodeJS
 - an .XLSX file (with bank records)
 - an .XLSX file (with account book records)
@@ -11,7 +12,7 @@ In order to make this project work you need 3 things:
 # How-To (Easy-Way):
 
 - make sure your files are ready as described below in the hard-way section
-- go to: `https://pastoral-brawny-cheddar.glitch.me/` and follow the instructions!
+- go to: `https://road-future-softball.glitch.me/` and follow the instructions!
 
 # How-to (Harder-Way):
 
