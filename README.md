@@ -68,3 +68,9 @@ In order to make this project work you need 3 things:
 
 - Bootstrap 5 for styling
 - Nodejs, expressJs, and EJS for the rest of functionality
+
+### Donations
+```
+<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="alifarhad" data-color="#FFDD00" data-emoji="☕"  data-font="Poppins" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff" ></script>
+```
+
