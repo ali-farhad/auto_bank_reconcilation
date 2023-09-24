@@ -13,6 +13,7 @@ let totalLocalRows = 0;
 let isBankFileReady = false;
 let isLocalFileReady = false;
 let isDownloadReady = false;
+let isDonateReady = false;
 //Routes
 router.get("/", (req, res) => {
   res.render("index", {
@@ -26,6 +27,7 @@ router.get("/", (req, res) => {
     isBankFileReady,
     isLocalFileReady,
     isDownloadReady,
+    isDonateReady,
   });
   totalBankRows = 0;
   totalLocalRows = 0;
@@ -44,7 +46,8 @@ router.post("/uploadBank", upload.single("file"), (req, res) => {
   if (fileExtension !== ".xlsx" && fileExtension !== ".xls") {
     // Delete the uploaded file
     fs.unlinkSync(filePath);
-    res.render("index", { error: "only excel files are supported!" });
+    // res.render("index", { error: "only excel files are supported!" });
+    res.redirect("/");
     return;
   }
 
@@ -91,7 +94,8 @@ router.post("/uploadLocal", upload.single("file"), (req, res) => {
   if (fileExtension !== ".xlsx" && fileExtension !== ".xls") {
     // Delete the uploaded file
     fs.unlinkSync(filePath);
-    res.render("index", { error: "only excel files are supported!" });
+    // res.render("index", { error: "only excel files are supported!" });
+    res.redirect("/");
     return;
   }
 
@@ -226,23 +230,27 @@ const cleanUp = () => {
 
 router.get("/removeDups", (req, res) => {
   removeDups();
-  req.flash("dupMessage", "duplicates removed successfully!");
+  req.flash("dupMessage", "Duplicates removed successfully!");
   isDownloadReady = true;
 
+  isDonateReady = true;
+  // Redirect to another route if needed
   res.redirect("/");
 });
 
 router.get("/download", (req, res) => {
   const file = "public/uploads/result.xlsx";
 
-  res.download(file, (err) => {
+  res.download(file, "result.xlsx", (err) => {
     if (err) {
-      req.flash("fileErrMessage", "Failed to Download the file");
+      req.flash("fileErrMessage", "Failed to download the file");
+    } else {
+      req.flash("fileSuccessMessage", "File downloaded successfully!");
+      cleanUp(); // Perform any necessary clean-up actions after the download
     }
+
+    // Redirect to the desired route using JavaScript
   });
-  req.flash("fileSuccessMessage", "File Saved Successfully!");
-  cleanUp();
-  res.redirect("/");
 });
 
 module.exports = router;
