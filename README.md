@@ -68,3 +68,7 @@ In order to make this project work you need 3 things:
 
 - Bootstrap 5 for styling
 - Nodejs, expressJs, and EJS for the rest of functionality
+
+### Donations
+
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/alifarhad)
